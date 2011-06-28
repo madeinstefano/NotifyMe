@@ -1,0 +1,43 @@
+﻿<!doctype HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>new system messenger: NotifyMe</title>
+    
+    <script src="jquery-1.6.1.min.js"></script>
+    <script src="jquery.footer-1.1.min.js"></script>
+    <script src="notify-me.js"></script>
+    
+    <link type="text/css" href="common.css" rel="stylesheet"/>
+    <link type="text/css" href="notify-me.css" rel="stylesheet"/>
+    
+  </head>
+  <body>
+    <div id="header">
+      <h1>NotifyMe by szanata</h1>
+    </div>
+    <div id="content">
+      <p>&#10122;</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div id="footer">
+      <div>
+        <h3>some footer content</h3>
+      </div>
+    </div>
+    
+    <script>
+      $(function (){
+      
+        $('#footer').footer();
+        
+        NotifyMe.addError('Um erro inesperado ocorreu!')
+        NotifyMe.addWarning('Preencha os campos com letras apenas.')
+        NotifyMe.addInfo('Voce sabia que pode comprar mais licenças pelo próprio center? <a href="http://aaaa.com">Como?</a>')
+        NotifyMe.addSuccess('Todo salvo corretamente.')
+        NotifyMe.addError('Outro erro.')
+      });
+    </script>
+  </body>
+</html>
