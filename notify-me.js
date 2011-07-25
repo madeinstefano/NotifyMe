@@ -1,4 +1,10 @@
-﻿var NotifyMe = window.NotifyMe = (function (){
+﻿/**
+* NotifyMe by Stéfano Stypulkowski
+*
+* @version 1.0.5
+*
+*/
+var NotifyMe = window.NotifyMe = (function (){
 
   var 
     messageComp = $('<div class="nm-message"><ul class="nm-ul"></ul><div style="clear:both;"></div></div>'),
@@ -7,10 +13,10 @@
     box = $('<div class="nm-wrapper"></div>'),
     spacer = $('<div class="nm-spacer"></div>'),
     markers = {
-      warning: 'aviso',
-      error: 'erro',
+      warning: 'warning',
+      error: 'error',
       info: 'info',
-      success: 'sucesso'
+      success: 'success'
     };
     
   function getBottomDistance(){
@@ -80,7 +86,7 @@
       $('.nm-message-' + type).remove();
     }else{
       $('.nm-message-' + type).each(function (index){
-        if ($(this).find('span').text() === String(params[0])){
+        if ($(this).find('.nm-text').text() === String(params[0])){
           $(this).remove();
         }else{
           for (var i = 0, l = params.length; i <l ;i++){
